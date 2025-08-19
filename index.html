@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    
+
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h3>Dashboard</h3>
+            </div>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li><a href="#" class="active"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="#"><i class="fas fa-chart-line"></i> Analytics</a></li>
+                    <li><a href="#"><i class="fas fa-users"></i> Users</a></li>
+                    <li><a href="#"><i class="fas fa-cog"></i> Settings</a></li>
+                </ul>
+            </nav>
+            <div class="sidebar-footer">
+                <button id="mode-toggle" class="mode-toggle-btn">
+                    <i class="fas fa-sun"></i> Light
+                </button>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <header class="top-navbar">
+                <div class="search-bar">
+                    <input type="text" id="user-search" placeholder="Search users...">
+                    <i class="fas fa-search search-icon"></i>
+                </div>
+                <div class="navbar-icons">
+                    <div class="icon-notification">
+                        <i class="fas fa-bell"></i>
+                        <span class="notification-badge">3</span>
+                    </div>
+                    <div class="user-avatar">
+                        <img src="image1.jpg" alt="User Avatar">
+                    </div>
+                </div>
+            </header>
+
+            <section class="stats-section">
+                <div class="stat-card">
+                    <i class="fas fa-users stat-icon"></i>
+                    <div class="stat-info">
+                        <h3>Total Users</h3>
+                        <p>1,250</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-dollar-sign stat-icon"></i>
+                    <div class="stat-info">
+                        <h3>Sales</h3>
+                        <p>$5,000</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-chart-line stat-icon"></i>
+                    <div class="stat-info">
+                        <h3>Revenue</h3>
+                        <p>$15,000</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-project-diagram stat-icon"></i>
+                    <div class="stat-info">
+                        <h3>Active Projects</h3>
+                        <p>25</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="graph-section">
+                <div class="graph-card">
+                    <h3>Sales Performance</h3>
+                    <canvas id="salesChart"></canvas>
+                </div>
+            </section>
+
+            <section class="table-section">
+                <h3>User List</h3>
+                <div class="table-wrapper">
+                    <table id="user-table">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="user-row">
+                                <td>Abdullah</td>
+                                <td>abdullahbaloch232@gmail.com</td>
+                                <td><span class="status-active">Active</span></td>
+                            </tr>
+                            <tr class="user-row">
+                                <td>Roshan Ali</td>
+                                <td>roshanali222@gmail.com</td>
+                                <td><span class="status-inactive">Inactive</span></td>
+                            </tr>
+                            <tr class="user-row">
+                                <td>Amanullah</td>
+                                <td>amanullah6752@gmail.com</td>
+                                <td><span class="status-active">Active</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</body>
+</html>
